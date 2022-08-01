@@ -1,6 +1,10 @@
 import React from 'react'
 
+// CSS :
 import "./Cards.scss"
+
+
+
 
 const Cards = ({ title, result, total, detail , borderColor }) => {
     return (
