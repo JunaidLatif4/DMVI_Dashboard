@@ -23,7 +23,7 @@ import sales from "../../Assets/sales.png"
 import Union from "../../Assets/Union.png"
 import virtual from "../../Assets/virtual.png"
 
-import "./Sidebar.scss"
+import "./SideBar.scss"
 
 
 

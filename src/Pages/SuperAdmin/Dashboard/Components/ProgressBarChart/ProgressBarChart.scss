@@ -1,0 +1,59 @@
+.progressbarchart_container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    .title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: #2F3743;
+        text-align: center;
+    }
+
+    .bars {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        align-items: end;
+        gap: 8px;
+        overflow: scroll;
+        height: 287px;
+
+        .bar {
+            display: flex;
+            gap: 13px;
+
+            .MuiLinearProgress-bar {
+                background-color: #259E55 !important;
+
+            }
+
+            .MuiLinearProgress-colorPrimary {
+                width: 365px !important;
+
+            }
+
+            .bar_title {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 110%;
+                color: #606C80;
+            }
+
+            .bar_percent {
+
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 110%;
+                color: #606C80;
+            }
+        }
+    }
+}

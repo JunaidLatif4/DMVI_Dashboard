@@ -3,12 +3,10 @@ import React, { useEffect } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Home from "./Pages/Home/Home"
-import InvoiceTemplate from './Pages/InvoiceTemplace/InvoiceTemplate';
 
 import { ToastContainer, toast } from "react-toastify"
 
 import 'react-toastify/dist/ReactToastify.css';
-import Dashboard from './Pages/Dashboard/Dashboard';
 
 
 
@@ -28,11 +26,10 @@ const App = () => {
                 pauseOnHover
             />
             <div className="app_container">
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/invoice" component={InvoiceTemplate} />
-                <Route path="/dashboard" component={Dashboard} />
-            </Switch>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/dashboard" component={Home} />
+                </Switch>
             </div>
         </>
     )
