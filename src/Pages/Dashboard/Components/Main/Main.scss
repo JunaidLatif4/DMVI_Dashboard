@@ -1,0 +1,605 @@
+// font import there 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.pie_chart_container_main {
+    width: 100%;
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    // pie_chart title main div css start there
+    .pie_chart_containter_title_main {
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+
+
+        .pie_chart_title {
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 36px;
+            color: #1D2227;
+            border-bottom: 1px solid #1D2227;
+        }
+
+        .pie_chart_containter_title_main_icon {
+            img {
+                margin-left: 15px;
+            }
+
+
+        }
+
+    }
+
+    // pie_chart card css start from there
+
+    .pie_chart_containter_cards_main {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        padding-top: 46px;
+
+        // card 1 css
+        .pie_chart_first_card_main {
+            box-sizing: border-box;
+            width: 276px;
+            height: 141.86px;
+            background: #FFFFFF;
+            border: 1px solid #DBDBDB;
+            box-shadow: 0px 8px 12px rgba(67, 73, 79, 0.12);
+            border-radius: 12px;
+            border-left: 3px solid #57B582;
+
+            .card_content {
+                padding-top: 31px;
+                padding-bottom: 25px;
+                padding-left: 25px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .card_title {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #747474;
+                }
+
+                .card_number {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 19px;
+                    color: #747474;
+
+                    .card_bold {
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 28px;
+                        line-height: 110%;
+                        color: #2F3743;
+                    }
+                }
+
+                .card_result {
+
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 110%;
+                    color: #606C80;
+                    padding-top: 8px;
+                }
+            }
+        }
+
+        // card 2 css 
+        .pie_chart_second_card_main {
+            box-sizing: border-box;
+            width: 276px;
+            height: 141.86px;
+            background: #FFFFFF;
+            border: 1px solid #DBDBDB;
+            box-shadow: 0px 8px 12px rgba(67, 73, 79, 0.12);
+            border-radius: 12px;
+            border-left: 3px solid #E13976;
+
+            .card_content {
+                padding-top: 31px;
+                padding-bottom: 25px;
+                padding-left: 25px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .card_title {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #747474;
+                }
+
+                .card_number {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 19px;
+                    color: #747474;
+
+                    .card_bold {
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 28px;
+                        line-height: 110%;
+                        color: #2F3743;
+                    }
+                }
+
+                .card_result {
+
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 110%;
+                    color: #606C80;
+                    padding-top: 8px;
+                }
+            }
+        }
+
+        // card 3 css 
+        .pie_chart_third_card_main {
+            box-sizing: border-box;
+            width: 276px;
+            height: 141.86px;
+            background: #FFFFFF;
+            border: 1px solid #DBDBDB;
+            box-shadow: 0px 8px 12px rgba(67, 73, 79, 0.12);
+            border-radius: 12px;
+            border-left: 3px solid #FFA96B;
+
+            .card_content {
+                padding-top: 31px;
+                padding-bottom: 25px;
+                padding-left: 25px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .card_title {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #747474;
+                }
+
+                .card_number {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 19px;
+                    color: #747474;
+
+                    .card_bold {
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 28px;
+                        line-height: 110%;
+                        color: #2F3743;
+                    }
+                }
+
+                .card_result {
+
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 110%;
+                    color: #606C80;
+                    padding-top: 8px;
+                }
+            }
+        }
+
+        // card 4 css 
+        .pie_chart_fourth_card_main {
+            box-sizing: border-box;
+            width: 276px;
+            height: 141.86px;
+            background: #FFFFFF;
+            border: 1px solid #DBDBDB;
+            box-shadow: 0px 8px 12px rgba(67, 73, 79, 0.12);
+            border-radius: 12px;
+            border-left: 3px solid #DE7142;
+
+            .card_content {
+                padding-top: 31px;
+                padding-bottom: 25px;
+                padding-left: 25px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .card_title {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #747474;
+                }
+
+                .card_number {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 28px;
+                    line-height: 110%;
+                    color: #2F3743;
+
+                }
+
+                .card_result {
+
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 110%;
+                    color: #606C80;
+                    padding-top: 8px;
+                }
+            }
+        }
+
+    }
+
+    // chart section css 
+    .pie_charts_chart_section_main {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 20px;
+
+        .donut_chart_section_main {
+            width: 564px;
+            height: 419px;
+            background: #FFFFFF;
+            border: 1px solid #DBDBDB;
+            box-shadow: 0px 8px 12px rgba(67, 73, 79, 0.12);
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .left_donut_chart {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .left_content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 60px;
+
+                    .chart_title {
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 19px;
+                        color: #2F3743;
+                    }
+
+                    .donut_left {
+                        width: 193px;
+                        height: 193px;
+                    }
+                }
+
+                .left_donut_color_dots_main {
+                    display: flex;
+                    gap: 8px;
+
+                    .dot_1 {
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+
+                        .dot {
+                            width: 8px;
+                            height: 8px;
+                            background-color: #259E55;
+                            border-radius: 50%;
+                        }
+
+                        .dot_title {
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 10px;
+                            line-height: 110%;
+                            color: #606C80;
+
+                        }
+                    }
+
+                    .dot_2 {
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+
+                        .dot {
+                            width: 8px;
+                            height: 8px;
+                            background-color: #DE7142;
+                            border-radius: 50%;
+                        }
+
+                        .dot_title {
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 10px;
+                            line-height: 110%;
+                            color: #606C80;
+
+                        }
+                    }
+
+                    .dot_3 {
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+
+                        .dot {
+                            width: 8px;
+                            height: 8px;
+                            background-color: #E13976;
+                            border-radius: 50%;
+                        }
+
+                        .dot_title {
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 10px;
+                            line-height: 110%;
+                            color: #606C80;
+
+                        }
+                    }
+                }
+            }
+
+            .centre_line {
+                width: 2px;
+                height: 289px;
+                background-color: #DBDBDB;
+            }
+
+            .right_donut_chart {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .right_content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 60px;
+
+                    .chart_title {
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 19px;
+                        color: #2F3743;
+                    }
+
+                    .donut_right {
+                        width: 193px;
+                        height: 193px;
+                    }
+                }
+
+                .right_donut_color_dots_main {
+                    display: flex;
+                    gap: 8px;
+
+                    .dot_1 {
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+
+                        .dot {
+                            width: 8px;
+                            height: 8px;
+                            background-color: #259E55;
+                            border-radius: 50%;
+                        }
+
+                        .dot_title {
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 10px;
+                            line-height: 110%;
+                            color: #606C80;
+
+                        }
+                    }
+
+                    .dot_2 {
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+
+                        .dot {
+                            width: 8px;
+                            height: 8px;
+                            background-color: #DE7142;
+                            border-radius: 50%;
+                        }
+
+                        .dot_title {
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 10px;
+                            line-height: 110%;
+                            color: #606C80;
+
+                        }
+                    }
+
+                    .dot_3 {
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+
+                        .dot {
+                            width: 8px;
+                            height: 8px;
+                            background-color: #E13976;
+                            border-radius: 50%;
+                        }
+
+                        .dot_title {
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 10px;
+                            line-height: 110%;
+                            color: #606C80;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .pie_chart_bar_section_main {
+            box-sizing: border-box;
+            width: 563px;
+            height: 419px;
+            background: #FFFFFF;
+            border: 1px solid #DBDBDB;
+            box-shadow: 0px 8px 12px rgba(67, 73, 79, 0.12);
+            border-radius: 12px;
+
+            .section_title {
+
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 19px;
+                color: #2F3743;
+                text-align: center;
+                padding-top: 32px;
+                padding-bottom: 40px;
+            }
+
+            .bar_content {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                align-items: end;
+                gap: 8px;
+
+                .green_bar {
+                    display: flex;
+                    gap: 13px;
+
+                    .MuiLinearProgress-bar {
+                        background-color: #259E55 !important;
+
+                    }
+
+                    .MuiLinearProgress-colorPrimary {
+                        width: 365px !important;
+
+                    }
+
+                    .bar_title {
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 110%;
+                        color: #606C80;
+                    }
+
+                    .bar_percent {
+
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 110%;
+                        color: #606C80;
+                    }
+                }
+
+                .orange_bar {
+                    display: flex;
+                    gap: 13px;
+
+                    .MuiLinearProgress-bar {
+                        background-color: #F49C4B !important;
+
+                    }
+
+                    .MuiLinearProgress-colorPrimary {
+                        width: 365px !important;
+
+                    }
+
+                    .bar_title {
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 110%;
+                        color: #606C80;
+                    }
+
+                    .bar_percent {
+
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 110%;
+                        color: #606C80;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+.topbar_container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #DBDBDB;
+    margin-top: 1rem;
+    align-items: center;
+    padding: 0 2rem;
+    font-family: 'Outfit', sans-serif;
+    width: -webkit-fill-available;
+
+    .tabs_box {
+        display: flex;
+        gap: 2rem;
+
+        .tab {
+            font-size: 20px;
+            font-weight: 600;
+            color: #606C80;
+            // color: #274C7E;
+            padding: 1.3rem .3rem;
+            // border-bottom: 2px solid #274C7E;
+            margin-bottom: -2px;
+            cursor: pointer;
+        }
+
+    }
+
+    .action_box {
+        display: flex;
+        gap: 20px;
+
+        .action {
+            cursor: pointer;
+        }
+    }
+}
+.productsdetail_container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+
+   
+
+    .dashboard_container {
+        // margin: rem 0;
+        padding: 1.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-family: 'Outfit', sans-serif !important;
+        overflow-y: scroll;
+        box-sizing: border-box;
+
+        .filter_box {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .detail_container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .detail_box {
+                width: -webkit-fill-available;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                height: 362px;
+                background-color: #FFFFFF;
+                border: 1px solid #DBDBDB;
+                box-shadow: 0px 8px 12px rgba(67, 73, 79, 0.12);
+                border-radius: 12px;
+                padding: 2rem;
+                align-items: center;
+
+                .chart_box {
+                    width: -webkit-fill-available;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+
+                    .chart {
+                        // height: 250px;
+                    }
+
+                }
+
+                .table_box {
+                    height: 320px;
+                }
+            }
+        }
+    }
+
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none !important;
+}
+
+.scrollbar-hidden {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+    /* Firefox */
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
