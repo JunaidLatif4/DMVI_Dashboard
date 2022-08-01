@@ -29,10 +29,10 @@ code {
 }
 
 .app_container {
-  min-height: 100vh;
+  /* min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 2rem; */
 }
