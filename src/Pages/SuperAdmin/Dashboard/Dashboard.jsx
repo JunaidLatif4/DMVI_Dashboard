@@ -12,7 +12,7 @@ import "./Dashboard.scss"
 
 
 
-
+// TopBar Tabs :
 let Tabs = ["Dashboard"]
 // Charts Data :
 const data = {
@@ -37,6 +37,27 @@ const vendingdata = {
         }
     ]
 };
+// ProgressBarData :
+let barData = [
+    { title: "CAMEL", value: 100 },
+    { title: "UFC", value: 40 },
+    { title: "VUSE", value: 60 },
+    { title: "COKE", value: 80 },
+    { title: "UFC", value: 70 },
+    { title: "DIET", value: 20 },
+    { title: "CAMEL", value: 50 },
+    { title: "VUSE", value: 60 },
+    { title: "CAMEL", value: 45 },
+    { title: "UFC", value: 70 },
+    { title: "CAMEL", value: 55 },
+    { title: "VUFC", value: 75 },
+    { title: "VUFC", value: 95 },
+    { title: "COKE", value: 35 },
+    { title: "CAMEL", value: 55 },
+    { title: "COKE", value: 90 },
+    { title: "DIET", value: 100 },
+    { title: "VUFC", value: 75 },
+]
 
 const Dashboard = () => {
 
@@ -60,7 +81,7 @@ const Dashboard = () => {
                         <DonutChart title={"Vending Machines Stock Status"} data={vendingdata} />
                     </div>
                     <div className='progressbar_box'>
-                        <ProgressBarChart />
+                        <ProgressBarChart title="Item availibility on vending machines" progressBarData={barData} />
                     </div>
                 </div>
             </div>

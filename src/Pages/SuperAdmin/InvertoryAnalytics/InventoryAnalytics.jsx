@@ -15,37 +15,23 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 
-// Chart.JS :
-import {
-    Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend,
-} from 'chart.js';
-import { Line } from 'react-chartjs-2';
-
-// Assets :
-import Collapse from "../../../Assets/collapse.png"
-import Bell from "../../../Assets/bell.png"
-import User from "../../../Assets/User.png"
+// Components :
+import TopBar from '../../../Components/TabsBar/TopBar';
+import LineChart from './Components/LineChart/LineChart';
+import CustomeTable from "./Components/Table/CustomeTable"
 
 // CSS :
 import "./InventoryAnalytics.scss"
-import TopBar from '../../../Components/TabsBar/TopBar';
 
-// Chart Registry :
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
-export const options = {
-    responsive: true,
-    plugins: {
-        legend: {
-            position: 'top',
-        },
-        title: {
-            display: false,
-            text: 'Chart.js Line Chart',
-        },
-    },
-};
+
+
+
+
+// Tabs :
+let Tabs = ["Top Products", "Top Machines", "Locations Analytics"]
+// LineChartData :
 const labels = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
-export const data = {
+export const LineChartData = {
     labels,
     datasets: [
         {
@@ -56,44 +42,25 @@ export const data = {
         },
     ],
 };
-
-
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
-    [`&.${tableCellClasses.head}`]: {
-        backgroundColor: "#E5E9EF",
-        //   color: theme.palette.common.white,
-    },
-    [`&.${tableCellClasses.body}`]: {
-        fontSize: "12px",
-    },
-}));
-
-function createData(
-    name,
-    calories,
-    fat,
-    carbs,
-    protein,
-) {
-    return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-    createData('Coffee Machine', "$125"),
-    createData('Coke', "$30"),
-    createData('Cupcake', "$45"),
-    createData('Cupcake', "$190"),
-    createData('Cupcake', "$130"),
-    createData('Cupcake', "$12"),
-    createData('Cupcake', "$14"),
-    createData('Cupcake', "$56"),
-    createData('Cupcake', "$44"),
-    createData('Cupcake', "$23"),
-    createData('Cupcake', "$43"),
+// TableData :
+const tableData = [
+    {name : "Coffee Machine" , value:"$125"},
+    {name : "Coke" , value:"$30"},
+    {name : "Coke" , value:"$50"},
+    {name : "Coffee Machine" , value:"$145"},
+    {name : "Cupcake" , value:"$455"},
+    {name : "Coke" , value:"$320"},
+    {name : "Coffee Machine" , value:"$25"},
+    {name : "Cupcake" , value:"$435"},
+    {name : "Cupcake" , value:"$465"},
+    {name : "Coffee Machine" , value:"$225"},
+    {name : "Coke" , value:"$360"},
+    {name : "Cupcake" , value:"$48"},
+    {name : "Coke" , value:"$30"},
+    {name : "Cupcake" , value:"$45"},
 ];
 
 
-let Tabs = ["Top Products", "Top Machines", "Locations Analytics"]
 const InventoryAnalytics = () => {
 
     const [selectedTab, setSelectedTab] = useState("Top Products")
@@ -123,7 +90,7 @@ const InventoryAnalytics = () => {
         <>
             <div className="productsdetail_container">
                 <TopBar tabs={Tabs} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
-                <div className="dashboard_container">
+                <div className="inventory_container">
                     <div className="filter_box">
                         <FormControl fullWidth>
                             <InputLabel id="demo-simple-select-label">Start Date</InputLabel>
@@ -227,146 +194,17 @@ const InventoryAnalytics = () => {
                         </FormControl>
                     </div>
                     <div className="detail_container">
-
                         <div className="detail_box">
-                            <div className="chart_box">
-                                <div className="heading">
-                                    Top Products by Revenue ($)
-                                </div>
-                                <div className="chart">
-                                    <Line style={{ height: "280px" }} options={options} data={data} />
-                                </div>
-                            </div>
-                            <div className="table_box">
-                                <TableContainer style={{ borderRadius: "8px", border: "1px solid #DBDBDB", height: "100%" }} component={Paper}>
-                                    <Table stickyHeader aria-label="simple table">
-                                        <TableHead>
-                                            <TableRow>
-                                                <StyledTableCell>Product</StyledTableCell>
-                                                <StyledTableCell align="right">Reevenue ($)</StyledTableCell>
-                                            </TableRow>
-                                        </TableHead>
-                                        <TableBody>
-                                            {rows.map((row) => (
-                                                <TableRow
-                                                    key={row.name}
-                                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                >
-                                                    <TableCell component="th" scope="row">
-                                                        {row.name}
-                                                    </TableCell>
-                                                    <TableCell align="right">{row.calories}</TableCell>
-                                                </TableRow>
-                                            ))}
-                                        </TableBody>
-                                    </Table>
-                                </TableContainer>
-                            </div>
+                            <LineChart title={"Top Products by Revenue ($)"} lineChartData={LineChartData} />
+                            <CustomeTable name={"Product"} value="Revenue ($)" tableData={tableData} />
                         </div>
                         <div className="detail_box">
-                            <div className="chart_box">
-                                <div className="heading">
-                                    Top Products by Revenue ($)
-                                </div>
-                                <div className="chart">
-                                    <Line style={{ height: "280px" }} options={options} data={data} />
-                                </div>
-                            </div>
-                            <div className="table_box">
-                                <TableContainer style={{ borderRadius: "8px", border: "1px solid #DBDBDB", height: "100%" }} component={Paper}>
-                                    <Table stickyHeader aria-label="simple table">
-                                        <TableHead>
-                                            <TableRow>
-                                                <StyledTableCell>Product</StyledTableCell>
-                                                <StyledTableCell align="right">Reevenue ($)</StyledTableCell>
-                                            </TableRow>
-                                        </TableHead>
-                                        <TableBody>
-                                            {rows.map((row) => (
-                                                <TableRow
-                                                    key={row.name}
-                                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                >
-                                                    <TableCell component="th" scope="row">
-                                                        {row.name}
-                                                    </TableCell>
-                                                    <TableCell align="right">{row.calories}</TableCell>
-                                                </TableRow>
-                                            ))}
-                                        </TableBody>
-                                    </Table>
-                                </TableContainer>
-                            </div>
+                            <LineChart title={"Top Products by Revenue ($)"} lineChartData={LineChartData} />
+                            <CustomeTable name={"Product"} value="Revenue ($)" tableData={tableData} />
                         </div>
                         <div className="detail_box">
-                            <div className="chart_box">
-                                <div className="heading">
-                                    Top Products by Revenue ($)
-                                </div>
-                                <div className="chart">
-                                    <Line style={{ height: "280px" }} options={options} data={data} />
-                                </div>
-                            </div>
-                            <div className="table_box">
-                                <TableContainer style={{ borderRadius: "8px", border: "1px solid #DBDBDB", height: "100%" }} component={Paper}>
-                                    <Table stickyHeader aria-label="simple table">
-                                        <TableHead>
-                                            <TableRow>
-                                                <StyledTableCell>Product</StyledTableCell>
-                                                <StyledTableCell align="right">Reevenue ($)</StyledTableCell>
-                                            </TableRow>
-                                        </TableHead>
-                                        <TableBody>
-                                            {rows.map((row) => (
-                                                <TableRow
-                                                    key={row.name}
-                                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                >
-                                                    <TableCell component="th" scope="row">
-                                                        {row.name}
-                                                    </TableCell>
-                                                    <TableCell align="right">{row.calories}</TableCell>
-                                                </TableRow>
-                                            ))}
-                                        </TableBody>
-                                    </Table>
-                                </TableContainer>
-                            </div>
-                        </div>
-                        <div className="detail_box">
-                            <div className="chart_box">
-                                <div className="heading">
-                                    Top Products by Revenue ($)
-                                </div>
-                                <div className="chart">
-                                    <Line style={{ height: "280px" }} options={options} data={data} />
-                                </div>
-                            </div>
-                            <div className="table_box">
-                                <TableContainer style={{ borderRadius: "8px", border: "1px solid #DBDBDB", height: "100%" }} component={Paper}>
-                                    <Table stickyHeader aria-label="simple table">
-                                        <TableHead>
-                                            <TableRow>
-                                                <StyledTableCell>Product</StyledTableCell>
-                                                <StyledTableCell align="right">Reevenue ($)</StyledTableCell>
-                                            </TableRow>
-                                        </TableHead>
-                                        <TableBody>
-                                            {rows.map((row) => (
-                                                <TableRow
-                                                    key={row.name}
-                                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                >
-                                                    <TableCell component="th" scope="row">
-                                                        {row.name}
-                                                    </TableCell>
-                                                    <TableCell align="right">{row.calories}</TableCell>
-                                                </TableRow>
-                                            ))}
-                                        </TableBody>
-                                    </Table>
-                                </TableContainer>
-                            </div>
+                            <LineChart title={"Top Products by Revenue ($)"} lineChartData={LineChartData} />
+                            <CustomeTable name={"Product"} value="Revenue ($)" tableData={tableData} />
                         </div>
                     </div>
                 </div>

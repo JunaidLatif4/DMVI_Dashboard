@@ -54,11 +54,11 @@ const ProgressBarChart = ({ title, progressBarData }) => {
         <>
             <div className="progressbarchart_container">
                 <div className='title'>
-                    Item availibility on vending machines
+                    {title}
                 </div>
                 <div className='bars'>
                     {
-                        Sample.map((data) => {
+                        progressBarData.map((data) => {
                             return (
                                 <>
                                     <div className='bar'>

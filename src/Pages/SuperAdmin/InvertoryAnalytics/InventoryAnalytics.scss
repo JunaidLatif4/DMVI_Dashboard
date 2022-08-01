@@ -6,7 +6,7 @@
 
 
 
-    .dashboard_container {
+    .inventory_container {
         // margin: rem 0;
         padding: 1.5rem 2rem;
         display: flex;
@@ -39,21 +39,6 @@
                 padding: 2rem;
                 align-items: center;
 
-                .chart_box {
-                    width: -webkit-fill-available;
-                    display: flex;
-                    flex-direction: column;
-                    gap: .5rem;
-
-                    .chart {
-                        // height: 250px;
-                    }
-
-                }
-
-                .table_box {
-                    height: 320px;
-                }
             }
         }
     }
