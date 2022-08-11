@@ -13,7 +13,7 @@ import "./Dashboard.scss"
 
 
 // TopBar Tabs :
-let Tabs = ["Dashboard"]
+let Tabs = ["Dashboard" , "Details" , "Machines"]
 // Charts Data :
 const data = {
     labels: [],
@@ -39,7 +39,7 @@ const vendingdata = {
 };
 // ProgressBarData :
 let barData = [
-    { title: "CAMEL", value: 100 },
+    { title: "CAMEL", value: 20 },
     { title: "UFC", value: 40 },
     { title: "VUSE", value: 60 },
     { title: "COKE", value: 80 },
